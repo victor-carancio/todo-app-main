@@ -5,16 +5,16 @@
 }
 
 body {
-    min-width: 375px;
+    min-width: 23.4375rem;
     background-color: var(--backgorund-color-main);
     background-image: var(--toggle-background-img);
     background-repeat: no-repeat;
-    background-size: 100% 200px;
+    background-size: 100% 12.5rem;
     background-position: start center;
 
     @include breakpoint-up(large){
         
-        background-size: 100% 300px;
+        background-size: 100% 18.75rem;
     }
     
 }
@@ -24,8 +24,8 @@ body {
     width: 100%;
     color: var(--item-font-light);
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem;
     
 }
 

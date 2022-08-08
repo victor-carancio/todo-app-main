@@ -17,15 +17,15 @@
     }
 
     &-input {
-        margin-bottom: 15px;
+        margin-bottom: 0.9375rem;
         background: var(--background-item);
-        border-radius: 5px;
+        border-radius: 0.3125rem;
 
         input {
             background: var(--background-item);
             color: var(--item-font-normal);
             border: none;
-            height: 30px;
+            height: 1.875rem;
             width: 90%;
             font-size: $font-xm;
             &:focus {
@@ -34,28 +34,28 @@
         }
 
         @include breakpoint-up(large) {
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
     }
 
     &-item-container {
         height: auto;
         background: var(--background-item);
-        border-radius: 5px;
+        border-radius: 0.3125rem;
         display: flex;
         flex-flow: column nowrap;
     }
 
     &-article {
         
-        height: 50px;
+        height: 3.125rem;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
         font-size: $font-xm;
 
         .article-text {
-            margin-right: 20px;
+            margin-right: 1.25rem;
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -63,12 +63,12 @@
         }
 
         @include breakpoint-up(large) {
-            height: 65px;
+            height: 4.0625rem;
         }
     }
 
     &-item {
-        border-bottom: 1px solid var(--item-border-bottom);
+        border-bottom: 0.0625rem solid var(--item-border-bottom);
         cursor: move;
     }
 
@@ -89,24 +89,24 @@
     }
 
     &-footer {
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 0.3125rem;
+        border-bottom-right-radius: 0.3125rem;
         background-color: var(--background-item);
         font-size: $font-sm;
         color: var(--item-font-light);
-        height: 50px;
+        height: 3.125rem;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
         @include breakpoint-up(large) {
-            height: 65px;
+            height: 4.0625rem;
         }
         #main-left-items {
-            margin-left: 20px;
+            margin-left: 1.25rem;
         }
         #clear-btn {
-            margin-right: 20px;
+            margin-right: 1.25rem;
         }
         p {
             &:hover {
@@ -116,7 +116,7 @@
         }
         div {
             p:not(:last-child) {
-                margin-right: 25px;
+                margin-right: 1.5625rem;
             }
             p {
                 display: inline;
@@ -132,19 +132,19 @@
         color: var(--item-font-light);
         font-size: $font-sm;
         width: 100%;
-        height: 50px;
-        margin-top: 15px;
-        border-radius: 5px;
+        height: 3.125rem;
+        margin-top: 0.9375rem;
+        border-radius: 0.3125rem;
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
         background: var(--background-item);
         p:not(:last-child) {
-            margin-right: 25px;
+            margin-right: 1.5625rem;
         }
         @include breakpoint-up(large) {
-            height: 65px;
+            height: 4.0625rem;
         }
         p {
             &:hover {
@@ -156,17 +156,17 @@
 
     &-circle {
         cursor: pointer;
-        width: 20px;
-        height: 20px;
+        width: 1.25rem;
+        height: 1.25rem;
         background-size: cover;
         background-position: center;
-        border: 1px solid var(--item-border-bottom);
+        border: 0.0625rem solid var(--item-border-bottom);
 
-        border-radius: 20px;
-        margin-left: 20px;
-        margin-right: 15px;
+        border-radius: 1.25rem;
+        margin-left: 1.25rem;
+        margin-right: 0.9375rem;
         @include breakpoint-down(medium) {
-            height: 16px;
+            height: 1rem;
         }
         &:hover {
             /*  border: 2px solid transparent;
@@ -191,14 +191,14 @@
 
             .main-check {
                 display: inline;
-                margin-left: 4px;
+                margin-left: 0.25rem;
             }
         }
     }
 
     .cross-img{
-        height: 20px;
-        width: 20px;
+        height: 1.25rem;
+        width: 1.25rem;
         
         cursor: pointer;
     }
