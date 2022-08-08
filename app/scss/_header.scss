@@ -17,10 +17,14 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
+        @include breakpoint-up(medium){
+            width: 34.375rem;
+        }
         
     }
 
     &-title{
+        font-size: $font-lg;
         color: $very-light-gray;
         letter-spacing: 0.875rem;
     }
