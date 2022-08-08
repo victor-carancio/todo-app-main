@@ -64,6 +64,11 @@ $item-font-light: $dark-grayish-blue; */
 .main-articles {
   width: 85%;
 }
+@media (min-width: 40em) {
+  .main-articles {
+    width: 550px;
+  }
+}
 .main-input {
   margin-bottom: 0.9375rem;
   background: var(--background-item);
