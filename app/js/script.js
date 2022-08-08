@@ -260,28 +260,34 @@ function setupItemsOnLoad(){
     let items = getLocalStorage();
     let order = getOrderStorage();
 
-    if (items.length > 0 && order.length > 0) {
-        order.forEach((element) =>{
-            const orderList = items.find((item) =>{
-                if(item.id == element){
-                    return item;
-                }
+    console.log(order.length);
+    if(order.length == 0){
+        setupItems('all');
+    }else {
+        if (items.length > 0 ) {
+            order.forEach((element) =>{
+                const orderList = items.find((item) =>{
+                    if(item.id == element){
+                        return item;
+                    }
+                })
+                   /*  console.log(orderList); */
+                    AddItem(orderList.value, orderList.id, orderList.status);
+                    itemContainer.classList.add("show-container");
+                    SetDefault();
             })
-               /*  console.log(orderList); */
-                AddItem(orderList.value, orderList.id, orderList.status);
-                itemContainer.classList.add("show-container");
-                SetDefault();
-        })
+        }
     }
+     
 
 }
 
 
 function setupItems(statusFilter) {
     let items = getLocalStorage();
-    let order = getOrderStorage();
+    
 
-    if (items.length > 0 && order.length > 0) {
+    if (items.length > 0) {
 
         items.forEach(function (item) {
             if (item.status == statusFilter || statusFilter == "all")
