@@ -235,12 +235,23 @@ function addToLocalStorage(id, value, status) {
 
 function removeFromLocalStorage(id) {
     let items = getLocalStorage();
+    let elements = getOrderStorage();
     items = items.filter(function (item) {
         if (item.id !== id) {
             return item;
         }
     });
+
+    if(elements.length > 0){
+        elements = elements.filter(function (element) {
+            if (element !== id) {
+                return element;
+            }
+        });
+    localStorage.setItem("orderList", elements.join(','));
+    }
     localStorage.setItem("list", JSON.stringify(items));
+    
 }
 
 function editLocalStorage(id) {
@@ -260,9 +271,10 @@ function setupItemsOnLoad(){
     let items = getLocalStorage();
     let order = getOrderStorage();
 
-    console.log(order.length);
+    
     if(order.length == 0){
         setupItems('all');
+        console.log(order.length);
     }else {
         if (items.length > 0 ) {
             order.forEach((element) =>{
