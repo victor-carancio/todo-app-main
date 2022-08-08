@@ -1,0 +1,216 @@
+.main {
+    width: 100%;
+    color: var(--item-font-normal);
+
+    &-container {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .articles-container {
+        visibility: hidden;
+    }
+
+    &-articles {
+        width: 85%;
+    }
+
+    &-input {
+        margin-bottom: 15px;
+        background: var(--background-item);
+        border-radius: 5px;
+
+        input {
+            background: var(--background-item);
+            color: var(--item-font-normal);
+            border: none;
+            height: 30px;
+            width: 90%;
+            font-size: $font-xm;
+            &:focus {
+                outline: none;
+            }
+        }
+
+        @include breakpoint-up(large) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &-item-container {
+        height: auto;
+        background: var(--background-item);
+        border-radius: 5px;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    &-article {
+        
+        height: 50px;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        font-size: $font-xm;
+
+        .article-text {
+            margin-right: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include breakpoint-up(large) {
+            height: 65px;
+        }
+    }
+
+    &-item {
+        border-bottom: 1px solid var(--item-border-bottom);
+        cursor: move;
+    }
+
+    //Sortable
+
+    &-selection{
+        /* transform: scale(1.02) rotate(-1deg); */
+        /* border: 1px solid var(--item-border-bottom); */
+        
+        /* box-shadow: 0px 0px 20px rgba(149, 153, 159, .16); */
+        transform: scale(1.0);
+        background-color: var(--background-on-drag);
+    }
+
+    &-drag{
+        opacity: 0;
+
+    }
+
+    &-footer {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: var(--background-item);
+        font-size: $font-sm;
+        color: var(--item-font-light);
+        height: 50px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        @include breakpoint-up(large) {
+            height: 65px;
+        }
+        #main-left-items {
+            margin-left: 20px;
+        }
+        #clear-btn {
+            margin-right: 20px;
+        }
+        p {
+            &:hover {
+                color: var(--item-font-hover);
+                cursor: pointer;
+            }
+        }
+        div {
+            p:not(:last-child) {
+                margin-right: 25px;
+            }
+            p {
+                display: inline;
+                &:hover {
+                    color: var(--item-font-hover);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &-final {
+        color: var(--item-font-light);
+        font-size: $font-sm;
+        width: 100%;
+        height: 50px;
+        margin-top: 15px;
+        border-radius: 5px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        background: var(--background-item);
+        p:not(:last-child) {
+            margin-right: 25px;
+        }
+        @include breakpoint-up(large) {
+            height: 65px;
+        }
+        p {
+            &:hover {
+                color: var(--item-font-hover);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &-circle {
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+        background-position: center;
+        border: 1px solid var(--item-border-bottom);
+
+        border-radius: 20px;
+        margin-left: 20px;
+        margin-right: 15px;
+        @include breakpoint-down(medium) {
+            height: 16px;
+        }
+        &:hover {
+            /*  border: 2px solid transparent;
+            border-image: $gradient-check-background 1 100%;
+            border-width: 2px; */
+        }
+    }
+
+    &-check {
+        display: none;
+    }
+
+    .complete {
+        p {
+            color: var(--item-font-complete);
+            text-decoration-line: line-through;
+        }
+        .main-circle {
+            cursor: default;
+            background-image: $gradient-check-background;
+            background-size: cover;
+
+            .main-check {
+                display: inline;
+                margin-left: 4px;
+            }
+        }
+    }
+
+    .cross-img{
+        height: 20px;
+        width: 20px;
+        
+        cursor: pointer;
+    }
+    .selected {
+        color: $blue;
+    }
+
+    .show-container {
+        visibility: visible;
+    }
+    /* .hide-container{
+        visibility: hidden;
+    }
+ */
+}

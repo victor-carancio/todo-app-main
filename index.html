@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./app/css/style.css" />
+        <title>Frontend Mentor | Todo app</title>
+    </head>
+    <body class="body dark-theme">
+        <header class="header">
+            <div class="header-container">
+                <h1 class="header-title">TODO</h1>
+                <div class="header-icon"></div>
+            </div>
+        </header>
+		
+
+        <main class="main">
+            <div class="main-container">
+                <section class="main-articles">
+					<div class="main-input main-article">
+						<div class="main-circle">
+                            
+                        </div>
+						<input id="add-item" type="text" placeholder="Create a new todo...">
+					</div>
+					<div class="articles-container">
+						<div class="main-item-container">
+								
+                           
+
+							
+	
+						<!-- 	<article class="main-footer hide-for-mobile">
+								<p id="main-left-items">items left</p>
+								
+								<p id="clear">Clear Completed</p>
+							</article> -->
+	
+							
+						</div>
+                        <article class="main-footer">
+                            <p id="main-left-items" >items left</p>
+                            <div class="hide-for-mobile">
+                                <p id="all" class="all selected">All</p>
+                                <p id="active" class="active">Active</p>
+                                <p id="completed" class="completed">Completed</p>
+                            </div>
+                            <p id="clear-btn">Clear Completed</p>
+                        </article>
+	
+						<article class="main-final hide-for-desktop">
+							<p id="all" class="all selected">All</p>
+							<p id="active" class="active">Active</p>
+							<p id="completed" class="completed">Completed</p>
+						</article>
+	
+					</div>
+					
+					
+					
+                   
+					
+                </section>
+              
+            </div>
+        </main>
+		<div>
+			<p class="final-p">Drag and drop to reorder list</p>
+		</div>
+        
+		<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+        <script src="./app/js/script.js"></script>
+    </body>
+</html>

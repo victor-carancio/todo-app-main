@@ -1,0 +1,42 @@
+.header{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint-up(large){
+        height: 160px;
+    }
+
+    &-container{
+         
+        width: 85%;
+        height: 25px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    &-title{
+        color: $very-light-gray;
+        letter-spacing: 14px;
+    }
+    &-icon{
+        width: 32px;
+        height: 32px;
+        background: var(--toggle-icon-image);
+        background-repeat: no-repeat;
+        background-size:28px;
+        background-position: center ;
+        cursor: pointer;
+        &:hover{
+            background: var(--toggle-icon-hover);
+            background-repeat: no-repeat;
+            background-size:28px;
+            background-position: center ;
+        }
+    }
+}

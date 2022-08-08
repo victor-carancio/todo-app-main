@@ -1,0 +1,30 @@
+:root{
+    --backgorund-color-main: #{$very-light-grayish-blue};
+    --background-item: #{$very-light-gray};
+    --item-border-bottom: #{$light-grayish-blue};
+    --item-font-normal: #{$very-dark-grayish-blue};
+    --item-font-complete: #{$light-grayish-blue};
+    --item-font-light: #{$dark-grayish-blue};
+    --item-font-hover: #{$very-dark-grayish-blue};
+    --toggle-icon-image: #{$moon-image};
+    --toggle-icon-hover: #{$moon-img-hover};
+    --toggle-background-img: #{$background-light-img};
+    --background-on-drag: #{$very-light-grayish-blue};
+
+ }
+
+.dark-theme{
+    --backgorund-color-main: #{$very-dark-blue};
+    --background-item: #{$very-dark-desaturated-blue};
+    --item-border-bottom: #{$very-dark-grayish-blue};
+    --item-font-normal: #{$light-grayish-blue};
+    --item-font-complete: #{$dark-grayish-blue};
+    --item-font-light: #{$dark-grayish-blue};
+    --item-font-hover: #{$light-grayish-blue-hover};
+    --toggle-icon-image: #{$sun-image};
+    --toggle-icon-hover: #{$sun-img-hover};
+    --toggle-background-img: #{$background-dark-img};
+    --background-on-drag: #{$on-drag-item};
+}
+
+

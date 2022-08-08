@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    min-width: 375px;
+    background-color: var(--backgorund-color-main);
+    background-image: var(--toggle-background-img);
+    background-repeat: no-repeat;
+    background-size: 100% 200px;
+    background-position: start center;
+
+    @include breakpoint-up(large){
+        
+        background-size: 100% 300px;
+    }
+    
+}
+
+.final-p{
+   
+    width: 100%;
+    color: var(--item-font-light);
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.hide-for-mobile {
+    @include breakpoint-down(medium){
+        display: none;
+    }    
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large){
+        display: none;
+    }
+}
+
